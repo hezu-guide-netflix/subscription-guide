@@ -18,7 +18,7 @@
 
 目标地址为 `https://ppwjpp.github.io/subscription-guide/`。GitHub Pages 使用 `main` 分支根目录发布。
 
-推广入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html` 与 `checklist.html`。短链接在 2026-10-14 跳转至 `https://www.ihezu.cn/?sid=cM5eHW`。
+推广入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。短链接在 2026-10-14 跳转至 `https://www.ihezu.cn/?sid=cM5eHW`。
 
 平台政策或正文修改后，更新对应页面的最后核对日期，以及 `sitemap.xml` 的 `lastmod`。不要添加未经验证的价格、使用体验或收益承诺。
 
