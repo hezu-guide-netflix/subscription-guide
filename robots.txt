@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ppwjpp.github.io/subscription-guide/sitemap.xml
