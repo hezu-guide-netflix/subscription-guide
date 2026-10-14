@@ -4,7 +4,7 @@
 
 ## 页面
 
-- `index.html`：首页与商家入口
+- `index.html`：长篇 Netflix 合租选购指南、平台对照与商家入口
 - `checklist.html`：六项购买前核对清单
 - `ihezu.html`：奈飞小铺购买前须知与推广入口
 - `rules.html`：Netflix 官方共享规则摘要
