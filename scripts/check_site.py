@@ -91,6 +91,9 @@ def main():
     assert all(inbound[name] for name in pages), "Orphan page"
     urls = {x.text for x in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc")}
     assert urls == {BASE + ("" if name == "index.html" else name) for name in pages}, "Sitemap does not match pages"
+    if (ROOT / "sitemap.txt").exists():
+        text_urls = (ROOT / "sitemap.txt").read_text(encoding="utf-8").splitlines()
+        assert len(text_urls) == len(urls) and set(text_urls) == urls, "Text and XML sitemaps differ"
     for date in ET.parse(ROOT / "sitemap.xml").findall(".//{*}lastmod"):
         assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", date.text), "Invalid sitemap date"
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
