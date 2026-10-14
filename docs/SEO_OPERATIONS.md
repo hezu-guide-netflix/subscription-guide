@@ -70,3 +70,11 @@ lastmod只在正文实际修改时更新，不每天改日期。专题保持独�
 - [请求重新抓取](https://developers.google.com/search/docs/crawling-indexing/ask-google-to-recrawl)
 - [面包屑标记](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb)
 
+
+## 本次发布验证结果（2026-10-14）
+
+- 9个线上页面及sitemap均返回200，最新版标题、JSON-LD、样式引用和九页站点地图已确认。
+- 手机390px宽度下九页均无整页横向溢出；首页三个入口仍为白字按钮，名称和新用户限制已验证。
+- 移动端PageSpeed复测：性能99，无障碍100，最佳做法100，基础SEO100；LCP约0.9秒，TBT为0，CLS为0。这是一次实验室测量，不是搜索排名，也没有真实用户核心网页指标数据。
+- [Google PageSpeed报告](https://pagespeed.web.dev/analysis/https-hezu-guide-netflix-github-io-subscription-guide/c11i7nud4i?form_factor=mobile)
+- Google富媒体结果测试要求登录，尚未取得其检测结论；本地结构化数据和面包屑检查通过。Search Console仍停在登录页，未完成所有权验证或提交站点地图。
