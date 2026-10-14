@@ -27,7 +27,7 @@
 5. 验证后，在“站点地图”提交 `https://hezu-guide-netflix.github.io/subscription-guide/sitemap.xml`；若输入框已显示本站前缀，仅填写sitemap.xml。
 6. 用“网址检查”检查首页及三个新专题。检查实际索引状态、Google选择的规范网址和实时测试结果；符合条件时请求编入索引。请求不保证收录或排名，不必反复提交。
 
-当前浏览器尚未登录，不能生成真实验证标签，也没有证据表明已提交站点地图。
+2026-10-14 已通过HTML标签完成所有权验证，并提交站点地图。最新处理情况见文末记录。
 
 ## robots.txt路径限制
 
@@ -77,4 +77,13 @@ lastmod只在正文实际修改时更新，不每天改日期。专题保持独�
 - 手机390px宽度下九页均无整页横向溢出；首页三个入口仍为白字按钮，名称和新用户限制已验证。
 - 移动端PageSpeed复测：性能99，无障碍100，最佳做法100，基础SEO100；LCP约0.9秒，TBT为0，CLS为0。这是一次实验室测量，不是搜索排名，也没有真实用户核心网页指标数据。
 - [Google PageSpeed报告](https://pagespeed.web.dev/analysis/https-hezu-guide-netflix-github-io-subscription-guide/c11i7nud4i?form_factor=mobile)
-- Google富媒体结果测试要求登录，尚未取得其检测结论；本地结构化数据和面包屑检查通过。Search Console仍停在登录页，未完成所有权验证或提交站点地图。
+- 最初未登录时无法完成Google富媒体测试和Search Console验证；用户随后登录，后续结果见下方记录。
+
+## Search Console执行记录（2026-10-14）
+
+- 已通过HTML标签验证本站网址前缀资源。标签已发布到首页，维护时保留。
+- Google实时测试首页：允许编入索引；首页及tv-playback.html、netflix-4k.html、subscription-cost.html的收录请求均显示已加入优先抓取队列。请求不是已收录的证明；检查时这四页均尚未收录。
+- tv-playback.html已通过Google富媒体测试，检测到一项有效面包屑内容：[测试结果](https://search.google.com/test/rich-results/result?id=xZq0aSyMyKIM3Ku7pm3URQ)。
+- sitemap.xml已提交，并在首次显示无法读取后重试一次；报告仍显示无法抓取、发现网页0。这不是成功读取的状态。
+- 已排查：公开XML返回200且解析到9个网址；根目录robots.txt为404，没有发现阻止规则；Google对sitemap.xml的实时测试明确显示允许抓取、网页抓取成功；人工处置报告未检测到问题。因此暂未定位到应修改的代码或规则，不改变规范URL、不反复提交，也不将地图报告错误宣称为已解决。
+- 下一步查看Google后续地图处理和页面索引结果。若持续无法读取，依据[Google站点地图排查指南](https://support.google.com/webmasters/answer/7451001)继续检查抓取详情。小站所有页面可由首页内链到达，已提交首页收录请求；地图报告错误不等于网页被禁止抓取。
