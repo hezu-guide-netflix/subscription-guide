@@ -186,7 +186,12 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-platform ul { margin: 5px 0 22px; padding-left: 1.2em; color: #3c4d5f; line-height: 1.8; }
 .guide-platform li { margin: 5px 0; }
 .guide-platform-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 17px; }
-.guide-platform-actions > a:last-child, .guide-text-link { font-size: 14px; font-weight: 800; }
+.guide-platform-actions > a:not(.button), .guide-text-link { font-size: 14px; font-weight: 800; }
+.guide-platform-actions .button { min-width: 180px; }
+.guide-offer { margin-top: 20px; padding-top: 18px; border-top: 1px solid #e4eaee; }
+.guide-offer-head { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; font-size: 14px; color: #34465a; }
+.guide-offer code { display: inline-block; padding: 6px 12px; border: 1px solid #abc2d3; border-radius: 6px; background: #eaf2f8; color: #14213a; font: 800 18px/1.4 ui-monospace, SFMono-Regular, monospace; letter-spacing: .05em; }
+.guide-offer > p { margin: 10px 0 0; font-size: 13px; color: #607387; }
 .guide-platform .button, .guide-side-cta .button { color: white; }
 .guide-mini { font-size: 12px; color: #647384 !important; margin: 14px 0 0 !important; }
 .guide-coupon { margin: 16px 0 0; font-size: 14px; color: #34465a; }
