@@ -156,9 +156,9 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-article h1 { max-width: none; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.35; margin: 0 0 23px; font-weight: 850; color: #14213a; }
 .guide-intro { font-size: 17px; color: #34465a; line-height: 1.9; }
 .guide-article p { line-height: 1.9; }
-.guide-disclosure { background: #fff8e8; border-left: 4px solid #e1a944; padding: 16px 19px; margin: 27px 0 33px; font-size: 13px; color: #51442e; }
-.guide-disclosure strong { color: #503910; }
-.guide-disclosure p { margin: 5px 0 0; }
+.guide-tip { background: #fff8e8; border-left: 4px solid #e1a944; padding: 16px 19px; margin: 27px 0 33px; font-size: 13px; color: #51442e; }
+.guide-tip strong { color: #503910; }
+.guide-tip p { margin: 5px 0 0; }
 .guide-toc { border: 1px solid #cbdbe6; background: #f4f8fb; padding: 25px 27px; margin: 32px 0 43px; }
 .guide-toc-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid #d9e4eb; padding-bottom: 12px; margin-bottom: 16px; }
 .guide-toc-heading span { font-size: 19px; font-weight: 850; color: #14213a; }
@@ -188,7 +188,7 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-platform li { margin: 5px 0; }
 .guide-platform-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 17px; }
 .guide-platform-actions > a:last-child, .guide-text-link { font-size: 14px; font-weight: 800; }
-.guide-platform .button, .guide-side-promo .button { color: white; }
+.guide-platform .button, .guide-side-cta .button { color: white; }
 .guide-mini { font-size: 12px; color: #647384 !important; margin: 14px 0 0 !important; }
 .guide-steps { list-style: none; counter-reset: guide-step; padding: 0; margin: 18px 0 20px; }
 .guide-steps li { counter-increment: guide-step; display: grid; grid-template-columns: 36px 150px 1fr; gap: 12px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid #e4eaee; color: #3c4d5f; line-height: 1.75; }
@@ -210,11 +210,11 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-side-card { background: white; border: 1px solid #dce1e6; padding: 22px; margin-bottom: 18px; box-shadow: 0 4px 18px rgba(20,36,58,.04); }
 .guide-side-card > strong { display: block; color: #172b3c; font-size: 16px; margin-bottom: 13px; }
 .guide-side-card > a:not(.button) { display: block; font-size: 13px; font-weight: 700; text-decoration: none; padding: 8px 0; border-top: 1px solid #edf0f3; }
-.guide-side-promo { background: #173552; color: white; border-color: #173552; }
-.guide-side-promo > strong { color: white; font-size: 20px; line-height: 1.4; }
-.guide-side-promo p { color: #d1dfeb; font-size: 13px; line-height: 1.7; }
+.guide-side-cta { background: #173552; color: white; border-color: #173552; }
+.guide-side-cta > strong { color: white; font-size: 20px; line-height: 1.4; }
+.guide-side-cta p { color: #d1dfeb; font-size: 13px; line-height: 1.7; }
 .guide-side-label { display: block; color: #efb85b; font: 800 11px/1.4 ui-monospace, SFMono-Regular, monospace; margin-bottom: 13px; }
-.guide-side-promo .button { width: 100%; font-size: 13px; }
+.guide-side-cta .button { width: 100%; font-size: 13px; }
 .guide-side-small p { color: #607387; font-size: 13px; line-height: 1.75; }
 .guide-footer { background: #172231; color: #d3dce5; padding: 44px 0; font-size: 13px; }
 .guide-footer strong { color: white; font-size: 16px; }
