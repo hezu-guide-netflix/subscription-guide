@@ -6,6 +6,7 @@
 
 - `index.html`：首页与商家入口
 - `checklist.html`：六项购买前核对清单
+- `ihezu.html`：奈飞小铺购买前须知与推广入口
 - `rules.html`：Netflix 官方共享规则摘要
 - `about.html`：信息来源与推广披露
 
