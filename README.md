@@ -43,3 +43,9 @@ git diff --check
 九页均有唯一标题摘要、自引用canonical、Open Graph、WebPage/WebSite标记；子页含可见面包屑和对应JSON-LD。站点地图列出九个规范URL，专题可从首页、导航和目录到达。
 
 还需使用真实Google账号完成Search Console验证和站点地图提交，见[SEO上线与维护](docs/SEO_OPERATIONS.md)。没有账号验证或数据时，不宣称已收录、已提交或排名已提升。
+
+## 本地实用工具
+
+`subscription-cost.html#calculator`提供双方案费用计算器，价格、天数、支付比例与附加费用只在浏览器内计算，无服务器传输。JavaScript禁用时保留静态公式和算例。计算逻辑检查：`node scripts/test_calculator.cjs`。
+
+`tv-playback.html#quick`按屏幕现象跳转至步骤；`netflix-4k.html#check`提供本次检查可勾选的五项清单，勾选不代表系统验证成功，也不保存到服务器。

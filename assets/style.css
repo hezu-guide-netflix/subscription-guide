@@ -249,3 +249,20 @@ a.topic-card:hover { background: #eef4fc; border-color: #abc2d3; color: #14213a;
 .guide-table caption { text-align: left; padding: 0 0 12px; font-weight: 700; color: #34465a; }
 .guide-tip ol { padding-left: 1.4em; }
 .guide-tip li { margin: 8px 0; }
+
+.cost-tool { padding: 22px; background: #f2f6fa; border: 1px solid #c6d4e2; border-radius: 12px; }
+.cost-fields { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.cost-fields fieldset { min-width: 0; border: 1px solid #c6d4e2; padding: 16px; border-radius: 8px; }
+.cost-fields legend { font-weight: 700; }
+.cost-fields label { display: block; font-size: 14px; margin: 12px 0 5px; }
+.cost-fields input { width: 100%; min-height: 44px; border: 1px solid #8298b0; border-radius: 5px; padding: 8px; font: inherit; background: #fff; color: #14213a; }
+.cost-tool button { border: 0; cursor: pointer; margin: 20px 0 12px; }
+.cost-tool output { display: block; white-space: pre-line; line-height: 1.8; color: #243b53; }
+.symptom-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.symptom-links a { border: 1px solid #abc2d3; border-radius: 6px; padding: 10px 14px; background: #eef4fc; text-decoration: none; }
+input:focus-visible, button:focus-visible { outline: 3px solid #1458b8; outline-offset: 3px; }
+@media (max-width:600px) { .cost-fields { grid-template-columns: 1fr; } .cost-tool { padding: 14px; } }
+.playback-checks { border: 1px solid #abc2d3; border-radius: 8px; padding: 18px; background: #f2f6fa; }
+.playback-checks legend { font-weight: 700; }
+.playback-checks label { display: flex; align-items: start; gap: 10px; margin: 12px 0; cursor: pointer; }
+.playback-checks input { width: 18px; height: 18px; flex: none; margin-top: 5px; accent-color: #1458b8; }
