@@ -104,6 +104,19 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .sidebox p { color: var(--muted); font-size: 12px; margin: 21px 0 0; border-top: 1px solid var(--line); padding-top: 14px; }
 .source-list { font-size: 14px; }
 .source-list li { overflow-wrap: anywhere; }
+.breadcrumbs { color: var(--muted); font-size: 13px; margin: 0 0 16px; }
+.breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.breadcrumbs li + li::before { content: "/"; margin-right: 8px; color: #718295; }
+.page-meta { font-size: 13px; color: #607387; margin: 12px 0 0; }
+.topic-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 20px 0; }
+a.topic-card { display: block; padding: 20px; border: 1px solid #d9e2ea; border-radius: 10px; background: #f8fafb; color: #14213a; text-decoration: none; }
+a.topic-card:hover { background: #eef4fc; border-color: #abc2d3; color: #14213a; }
+.topic-card h3 { font-size: 18px; margin: 0 0 10px; line-height: 1.5; }
+.topic-card p { margin: 0 0 12px; font-size: 14px; }
+.topic-card span { color: #1458b8; font-size: 13px; font-weight: 700; }
+.article { min-width: 0; }
+.site-nav, .guide-nav nav { flex-wrap: wrap; }
+@media (max-width: 600px) { .topic-grid { grid-template-columns: 1fr; } .footer-grid { flex-wrap: wrap; } }
 @media (max-width: 800px) {
   .hero-grid, .promo, .article-layout { grid-template-columns: 1fr; }
   .ticket { transform: none; }

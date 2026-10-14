@@ -1,31 +1,45 @@
 # 合租订阅指南
 
-一个无需构建工具的静态网站。内容聚焦数字订阅合租购买前的判断。
+[阅读网站：Netflix订阅与账号使用指南](https://hezu-guide-netflix.github.io/subscription-guide/)
 
-## 页面
+无需构建工具的静态资料站，解释账号区别、观看条件、订阅费用和核对方法。规则引用官方资料，成本例子为教学假设，不代售商品或受理商家订单与售后。
 
-- `index.html`：Netflix 新手指南、账号术语、电视与4K条件、假设成本算例、客服问题模板和平台入口
-- `checklist.html`：六项购买前核对清单
-- `ihezu.html`：奈飞小铺购买前须知与商品入口
-- `rules.html`：Netflix 官方共享规则摘要
-- `about.html`：本站说明与信息来源
+## 按问题阅读
 
-## 本地预览
+- [共享、独享与额外成员有什么区别？](https://hezu-guide-netflix.github.io/subscription-guide/rules.html)
+- [Netflix电视无法播放，怎样排查？](https://hezu-guide-netflix.github.io/subscription-guide/tv-playback.html)
+- [高级套餐为什么看不到4K？](https://hezu-guide-netflix.github.io/subscription-guide/netflix-4k.html)
+- [26天月卡与年卡费用怎样比较？](https://hezu-guide-netflix.github.io/subscription-guide/subscription-cost.html)
+- [购买前六项核对清单](https://hezu-guide-netflix.github.io/subscription-guide/checklist.html)
+- [浏览全部专题](https://hezu-guide-netflix.github.io/subscription-guide/guides.html)
 
-在仓库根目录运行 `python3 -m http.server 8000`，打开 `http://localhost:8000/`。
+## 页面与维护
 
-## 发布与维护
+首页为总览；guides.html为专题目录；ihezu.html是商品说明核对示例；about.html说明来源与责任范围。其余专题按文件名对应独立问题。正文直接包含在HTML中，没有构建和前端依赖。
 
-目标地址为 `https://hezu-guide-netflix.github.io/subscription-guide/`。GitHub Pages 使用 `main` 分支根目录发布。
+本地预览：`python -m http.server 8000`。GitHub Pages使用main分支根目录发布。
 
-奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`，优惠码为 `mr23hey`，9折（优惠10%），适用商品及实际优惠以结算页为准。外链和优惠码只在 `index.html` 的平台信息示例中展示，统一标注推广关系；其他资料页仅通过站内链接引用。
+发布前运行：
 
-环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，优惠码为 `mr23hey`，限新注册且未下过订单的用户，均位于 `index.html`。
+```sh
+python scripts/check_site.py
+git diff --check
+```
 
-平台政策或正文修改后，更新 `sitemap.xml` 的 `lastmod`。不要添加未经验证的价格、使用体验或收益承诺。
+检查桌面、手机布局；表格可在自身容器横向滚动。样式更新时统一更换CSS版本，正文实际修改时更新对应lastmod和内容核对日期。
 
-网站上线并不自动产生搜索流量。应在 GitHub Pages 生效后检查页面可用性，再通过搜索引擎站长工具提交站点地图，并观察搜索曝光和出站点击。
+## 平台信息
 
-银河录像局商品入口为 `https://nf.video/5cy27`，优惠码为 `mr23hey`，95折（优惠5%），仅限新注册且未下过订单的用户。优惠条件根据用户提供的推广后台截图整理，结算页为准，位于 `index.html`。
+首页保留三个平台按钮，只显示平台名称。mr23hey为记录信息，当前优惠与条件以结算页为准，本站未测试结算效果。
 
-文案原则：资料解释优先，不使用推荐排名、催促购买、商家背书或商品可用性承诺。优惠信息按来源记录，不写为本站验证过的优惠；不承诺受理商家的订单、交付、退款或售后。
+- 奈飞小铺：`https://ihezu.zone/cM5eHW`，标称9折。
+- 环球巴士：`https://cn.goingbus.com/?s=326BOCN3JD`，限新注册且未下过订单的用户，折扣以结算页为准。
+- 银河录像局：`https://nf.video/5cy27`，标称95折，限新注册且未下过订单的用户。
+
+外链只列在首页，HTML保留适当的链接属性。资料页不写催促购买、推荐排名、安全背书或未经验证的体验。
+
+## 搜索上线
+
+九页均有唯一标题摘要、自引用canonical、Open Graph、WebPage/WebSite标记；子页含可见面包屑和对应JSON-LD。站点地图列出九个规范URL，专题可从首页、导航和目录到达。
+
+还需使用真实Google账号完成Search Console验证和站点地图提交，见[SEO上线与维护](docs/SEO_OPERATIONS.md)。没有账号验证或数据时，不宣称已收录、已提交或排名已提升。

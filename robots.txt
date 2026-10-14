@@ -1,3 +1,5 @@
 User-agent: *
 Allow: /
+# Crawlers use /robots.txt at the host root, not this project subpath.
+# This file is a template. Submit the sitemap via verified Search Console.
 Sitemap: https://hezu-guide-netflix.github.io/subscription-guide/sitemap.xml
