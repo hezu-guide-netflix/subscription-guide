@@ -189,6 +189,8 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-platform-actions > a:last-child, .guide-text-link { font-size: 14px; font-weight: 800; }
 .guide-platform .button, .guide-side-cta .button { color: white; }
 .guide-mini { font-size: 12px; color: #647384 !important; margin: 14px 0 0 !important; }
+.guide-coupon { margin: 16px 0 0; font-size: 14px; color: #34465a; }
+.guide-coupon code { display: inline-block; padding: 3px 8px; border: 1px dashed #8eafc3; background: #f2f7fa; color: #145b83; font: 800 14px/1.4 ui-monospace, SFMono-Regular, monospace; letter-spacing: .03em; }
 .guide-steps { list-style: none; counter-reset: guide-step; padding: 0; margin: 18px 0 20px; }
 .guide-steps li { counter-increment: guide-step; display: grid; grid-template-columns: 36px 150px 1fr; gap: 12px; align-items: baseline; padding: 15px 0; border-bottom: 1px solid #e4eaee; color: #3c4d5f; line-height: 1.75; }
 .guide-steps li::before { content: counter(guide-step, decimal-leading-zero); color: #1c6f9d; font: 800 14px/1.5 ui-monospace, SFMono-Regular, monospace; }

@@ -20,7 +20,7 @@
 
 奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。
 
-环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，位于 `index.html`。
+环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，优惠码为 `mr23hey`，均位于 `index.html`。
 
 平台政策或正文修改后，更新 `sitemap.xml` 的 `lastmod`。不要添加未经验证的价格、使用体验或收益承诺。
 
