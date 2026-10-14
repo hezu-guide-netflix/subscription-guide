@@ -18,7 +18,7 @@
 
 目标地址为 `https://hezu-guide-netflix.github.io/subscription-guide/`。GitHub Pages 使用 `main` 分支根目录发布。
 
-奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。
+奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`，优惠码为 `mr23hey`，9折（优惠10%），适用商品及实际优惠以结算页为准。更换链接或优惠码时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。
 
 环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，优惠码为 `mr23hey`，均位于 `index.html`。
 
