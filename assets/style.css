@@ -152,7 +152,6 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-banner-inner > p:last-child { color: #d6e0e9; font-size: 16px; }
 .guide-shell { display: grid; grid-template-columns: minmax(0, 790px) minmax(230px, 280px); gap: 28px; align-items: start; padding-top: 32px; padding-bottom: 72px; }
 .guide-article { min-width: 0; background: white; border: 1px solid #dce1e6; box-shadow: 0 8px 28px rgba(20,36,58,.06); padding: clamp(25px, 4vw, 48px); }
-.guide-meta { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; color: #68798a; font-size: 12px; font-weight: 700; margin-bottom: 18px; }
 .guide-article h1 { max-width: none; font-size: clamp(30px, 3.4vw, 42px); line-height: 1.35; margin: 0 0 23px; font-weight: 850; color: #14213a; }
 .guide-intro { font-size: 17px; color: #34465a; line-height: 1.9; }
 .guide-article p { line-height: 1.9; }
