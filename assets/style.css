@@ -206,6 +206,7 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-end-cta { margin-top: 39px; padding: 24px 27px; background: #eaf2f8; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
 .guide-end-cta strong { font-size: 19px; }
 .guide-end-cta p { margin: 5px 0 0; font-size: 14px; color: #52677c; }
+.guide-home a.button:not(.secondary), .guide-home a.button:not(.secondary):hover { color: #fff; }
 .guide-end-cta .button { white-space: nowrap; }
 .guide-sidebar { position: sticky; top: 20px; }
 .guide-side-card { background: white; border: 1px solid #dce1e6; padding: 22px; margin-bottom: 18px; box-shadow: 0 4px 18px rgba(20,36,58,.04); }
