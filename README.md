@@ -20,6 +20,8 @@
 
 奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。
 
+环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，位于 `index.html`。
+
 平台政策或正文修改后，更新 `sitemap.xml` 的 `lastmod`。不要添加未经验证的价格、使用体验或收益承诺。
 
 网站上线并不自动产生搜索流量。应在 GitHub Pages 生效后检查页面可用性，再通过搜索引擎站长工具提交站点地图，并观察搜索曝光和出站点击。
