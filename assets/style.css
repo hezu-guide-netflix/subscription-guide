@@ -174,7 +174,7 @@ a.topic-card:hover { background: #eef4fc; border-color: #abc2d3; color: #14213a;
 .guide-toc { border: 1px solid #cbdbe6; background: #f4f8fb; padding: 25px 27px; margin: 32px 0 43px; }
 .guide-toc-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid #d9e4eb; padding-bottom: 12px; margin-bottom: 16px; }
 .guide-toc-heading span { font-size: 19px; font-weight: 850; color: #14213a; }
-.guide-toc-heading small { font-size: 12px; color: #6b7c8c; }
+.guide-toc-heading small { font-size: 12px; color: #52617a; }
 .guide-toc ol { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); column-gap: 32px; row-gap: 6px; margin: 0; padding-left: 1.5em; }
 .guide-toc li { padding: 3px 0; font-size: 14px; font-weight: 650; }
 .guide-toc a { text-decoration: none; }
@@ -193,7 +193,7 @@ a.topic-card:hover { background: #eef4fc; border-color: #abc2d3; color: #14213a;
 .guide-platform.featured { border-color: #9ebed4; background: linear-gradient(180deg, #f3f8fb 0, #fff 145px); }
 .guide-platform-head { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
 .guide-platform-head h3 { margin: 0; line-height: 1.25; font-size: 23px; }
-.guide-platform-head p { font-size: 12px; color: #718295; margin: 4px 0 0; }
+.guide-platform-head p { font-size: 12px; color: #52617a; margin: 4px 0 0; }
 .guide-index { flex: none; border: 1px solid #abc2d3; color: #1d628f; padding: 5px 7px; font: 800 14px/1 ui-monospace, SFMono-Regular, monospace; }
 .guide-tag { margin-left: auto; flex: none; background: #f5dfaa; color: #6c4904; padding: 5px 9px; font-size: 11px; font-weight: 800; }
 .guide-platform ul { margin: 5px 0 22px; padding-left: 1.2em; color: #3c4d5f; line-height: 1.8; }
@@ -215,6 +215,7 @@ a.topic-card:hover { background: #eef4fc; border-color: #abc2d3; color: #14213a;
 .guide-steps li::before { content: counter(guide-step, decimal-leading-zero); color: #1c6f9d; font: 800 14px/1.5 ui-monospace, SFMono-Regular, monospace; }
 .guide-steps strong { color: #172b3c; }
 .guide-risk-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 13px; margin: 22px 0; }
+.guide-choice-title { font-size: 22px; margin: 28px 0 0; }
 .guide-risk-grid > div { border: 1px solid #e0e7ec; background: #f8fafb; padding: 20px; }
 .guide-risk-grid h3 { margin: 0 0 8px; font-size: 17px; }
 .guide-risk-grid p { font-size: 14px; margin: 0; }

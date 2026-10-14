@@ -18,12 +18,15 @@ class Page(HTMLParser):
         super().__init__(convert_charrefs=True)
         self.stack, self.ids, self.links, self.meta, self.canonicals = [], [], [], {}, []
         self.counts = Counter()
+        self.heading_levels = []
         self.feed(text)
         assert not self.stack, f"Unclosed tags: {self.stack}"
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
         self.counts[tag] += 1
+        if re.fullmatch(r"h[1-6]", tag):
+            self.heading_levels.append(int(tag[1]))
         if "id" in attrs:
             self.ids.append(attrs["id"])
         if tag in ("a", "link") and "href" in attrs:
@@ -48,6 +51,7 @@ def main():
         text = path.read_text(encoding="utf-8")
         page = Page(text)
         assert page.counts["h1"] == 1, f"{path.name}: expected one H1"
+        assert all(b <= a + 1 for a, b in zip(page.heading_levels, page.heading_levels[1:])), f"{path.name}: skipped heading level"
         assert len(page.ids) == len(set(page.ids)), f"{path.name}: duplicate IDs"
         title = re.search(r"<title>(.*?)</title>", text, re.S)
         assert title and title.group(1).strip(), f"{path.name}: missing title"
