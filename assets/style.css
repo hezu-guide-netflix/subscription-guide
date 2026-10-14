@@ -224,3 +224,7 @@ h3 { font-size: 19px; line-height: 1.4; margin-bottom: 9px; }
 .guide-footer a { color: #c0d9e9; text-decoration: none; }
 @media (max-width: 900px) { .guide-shell { grid-template-columns: minmax(0,1fr); } .guide-sidebar { position: static; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 15px; } .guide-side-card { margin: 0; } .guide-side-small { display: none; } }
 @media (max-width: 600px) { .guide-banner { min-height: 315px; } .guide-banner::after { right: -65px; top: 145px; width: 230px; height: 130px; opacity: .5; } .guide-nav { display: block; padding-top: 17px; } .guide-nav nav { margin-top: 13px; gap: 14px; } .guide-nav nav a { font-size: 12px; } .guide-banner-inner { padding: 56px 0 65px; text-align: left; } .guide-banner-inner > p:last-child { font-size: 14px; max-width: 20em; } .guide-shell { padding-top: 16px; } .guide-article { padding: 24px 19px; } .guide-toc { padding: 20px; } .guide-toc ol { grid-template-columns: 1fr; } .guide-section { padding-top: 32px; margin-top: 32px; } .guide-platform { padding: 19px; } .guide-steps li { grid-template-columns: 30px 1fr; gap: 5px 9px; } .guide-steps li span { grid-column: 2; } .guide-risk-grid, .guide-sidebar { grid-template-columns: 1fr; } .guide-end-cta { display: block; } .guide-end-cta .button { margin-top: 16px; } }
+
+.guide-table caption { text-align: left; padding: 0 0 12px; font-weight: 700; color: #34465a; }
+.guide-tip ol { padding-left: 1.4em; }
+.guide-tip li { margin: 8px 0; }
