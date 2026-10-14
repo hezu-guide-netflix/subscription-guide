@@ -20,7 +20,7 @@
 
 奈飞小铺商品入口目前为 `https://ihezu.zone/cM5eHW`，优惠码为 `mr23hey`，9折（优惠10%），适用商品及实际优惠以结算页为准。外链和优惠码只在 `index.html` 的平台信息示例中展示，统一标注推广关系；其他资料页仅通过站内链接引用。
 
-环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，优惠码为 `mr23hey`，均位于 `index.html`。
+环球巴士商品入口目前为 `https://cn.goingbus.com/?s=326BOCN3JD`，优惠码为 `mr23hey`，限新注册且未下过订单的用户，均位于 `index.html`。
 
 平台政策或正文修改后，更新 `sitemap.xml` 的 `lastmod`。不要添加未经验证的价格、使用体验或收益承诺。
 
