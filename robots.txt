@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ppwjpp.github.io/subscription-guide/sitemap.xml
+Sitemap: https://hezu-guide-netflix.github.io/subscription-guide/sitemap.xml

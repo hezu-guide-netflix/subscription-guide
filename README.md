@@ -16,7 +16,7 @@
 
 ## 发布与维护
 
-目标地址为 `https://ppwjpp.github.io/subscription-guide/`。GitHub Pages 使用 `main` 分支根目录发布。
+目标地址为 `https://hezu-guide-netflix.github.io/subscription-guide/`。GitHub Pages 使用 `main` 分支根目录发布。
 
 推广入口目前为 `https://ihezu.zone/cM5eHW`。更换链接时，请同步检查 `index.html`、`checklist.html` 与 `ihezu.html`。短链接在 2026-10-14 跳转至 `https://www.ihezu.cn/?sid=cM5eHW`。
 
