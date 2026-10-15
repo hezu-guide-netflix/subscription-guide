@@ -15,7 +15,7 @@
 
 ## 页面与维护
 
-首页为总览；guides.html为专题目录；ihezu.html是商品说明核对示例；about.html说明来源与责任范围。其余专题按文件名对应独立问题。正文直接包含在HTML中，没有构建和前端依赖。
+首页是单栏速读版；guides.html保留专题目录；ihezu.html是商品说明核对示例；about.html说明来源与责任范围。详细步骤分别放在对应专题，避免首页重复铺陈。正文直接包含在HTML中，没有构建和前端依赖。
 
 本地预览：`python -m http.server 8000`。GitHub Pages使用main分支根目录发布。
 
