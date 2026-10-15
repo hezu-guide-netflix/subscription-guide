@@ -46,7 +46,7 @@ class Page(HTMLParser):
 
 
 def main():
-    pages, titles, descriptions = {}, [], []
+    pages, titles, descriptions, modified = {}, [], [], {}
     for path in sorted(ROOT.glob("*.html")):
         text = path.read_text(encoding="utf-8")
         page = Page(text)
@@ -55,7 +55,8 @@ def main():
         assert len(page.ids) == len(set(page.ids)), f"{path.name}: duplicate IDs"
         title = re.search(r"<title>(.*?)</title>", text, re.S)
         assert title and title.group(1).strip(), f"{path.name}: missing title"
-        titles.append(title.group(1))
+        page_title = title.group(1)
+        titles.append(page_title)
         description = page.meta.get("description")
         assert description, f"{path.name}: missing description"
         descriptions.append(description)
@@ -63,10 +64,16 @@ def main():
         assert page.canonicals == [expected], f"{path.name}: incorrect canonical"
         assert "noindex" not in page.meta.get("robots", "").lower(), f"{path.name}: noindex"
         assert page.meta.get("og:url") == expected, f"{path.name}: missing Open Graph URL"
+        assert page.meta.get("og:title") == page.meta.get("twitter:title") == page_title, f"{path.name}: title metadata mismatch"
+        assert page.meta.get("og:description") == page.meta.get("twitter:description") == description, f"{path.name}: description metadata mismatch"
         schemas = [json.loads(s) for s in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S)]
         assert schemas, f"{path.name}: missing structured data"
         graph = schemas[0]["@graph"]
-        assert any(x.get("@type") in ("WebPage", "AboutPage", "CollectionPage") and x.get("url") == expected for x in graph)
+        matching = [x for x in graph if x.get("@type") in ("WebPage", "AboutPage", "CollectionPage") and x.get("url") == expected]
+        assert len(matching) == 1, f"{path.name}: missing or duplicate page schema"
+        schema_page = matching[0]
+        assert schema_page.get("name") == page_title and schema_page.get("description") == description, f"{path.name}: page schema metadata mismatch"
+        modified[expected] = schema_page.get("dateModified")
         if path.name != "index.html":
             crumb = next(x for x in graph if x.get("@type") == "BreadcrumbList")
             assert [x["position"] for x in crumb["itemListElement"]] == [1, 2]
@@ -89,13 +96,17 @@ def main():
             if target in pages and target != name:
                 inbound[target] += 1
     assert all(inbound[name] for name in pages), "Orphan page"
-    urls = {x.text for x in ET.parse(ROOT / "sitemap.xml").findall(".//{*}loc")}
+    entries = ET.parse(ROOT / "sitemap.xml").findall(".//{*}url")
+    urls = {x.findtext("{*}loc") for x in entries}
+    assert len(entries) == len(urls), "Duplicate sitemap URL"
     assert urls == {BASE + ("" if name == "index.html" else name) for name in pages}, "Sitemap does not match pages"
     if (ROOT / "sitemap.txt").exists():
         text_urls = (ROOT / "sitemap.txt").read_text(encoding="utf-8").splitlines()
         assert len(text_urls) == len(urls) and set(text_urls) == urls, "Text and XML sitemaps differ"
-    for date in ET.parse(ROOT / "sitemap.xml").findall(".//{*}lastmod"):
-        assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", date.text), "Invalid sitemap date"
+    for entry in entries:
+        url, date = entry.findtext("{*}loc"), entry.findtext("{*}lastmod")
+        assert date and re.fullmatch(r"\d{4}-\d{2}-\d{2}", date), "Invalid sitemap date"
+        assert modified[url] == date, f"{url}: sitemap and page dates differ"
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
     assert len(re.findall(r'guide-platform-actions"><a class="button"', homepage)) == 3
     assert homepage.count('<code>mr23hey</code>') == 3

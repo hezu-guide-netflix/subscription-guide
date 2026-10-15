@@ -115,3 +115,9 @@ Search Console最新网址检查确认首页、tv-playback.html、netflix-4k.htm
 - [Google 对 AI 搜索功能的说明](https://developers.google.com/search/docs/appearance/ai-features)指出，AI Overviews／AI Mode 没有额外的技术优化门槛；页面仍需满足普通搜索的收录和摘要资格。因此没有加入所谓专用 AEO 标签，也没有声称能保证 AI 引用。
 - 按[Google 的内容指南](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)优先提供明确答案和可核对的官方来源，不为了关键词重复加长正文。[FAQ 富媒体展示范围](https://developers.google.com/search/blog/2023/08/howto-faq-changes)主要限于权威政府与健康站点，本站未添加 FAQPage 标记。
 - 本次是内容结构调整，不能从发布本身推断排名改善。继续在 Search Console 观察页面索引、查询曝光与点击；站点地图原有“无法抓取”状态仍需依据后续报告核对。
+
+## 2026-10-15 技术复核
+
+- Search Console 的“效果”和整体索引报告仍显示“正在处理数据”；XML 与文本地图的状态仍为“无法抓取”，发现网页数为 0。公开的 XML 地图返回 200、`application/xml`，列出的九个网址与规范网址相同；主机根目录的 `robots.txt` 返回 404。现有证据不足以把问题归因于 XML 格式或页面禁止抓取，依照[Google 的站点地图排查说明](https://support.google.com/webmasters/answer/7451001)继续观察具体抓取结果。
+- 首页首次提及 Netflix 时补充常用中文名“奈飞”，保持自然表达，不重复堆砌。检查脚本新增标题、摘要在 HTML／社交元数据／结构化数据中的一致性，以及站点地图 `lastmod` 与页面 `dateModified` 的一致性；这些检查防止后续编辑引入矛盾，不代表排名分数。
+- 同日重试网址检查：`rules.html` 的 Google 索引状态为“无法识别此网址”，实时测试为“网址可编入 Google 索引”，检测到一项有效面包屑；已请求编入索引，界面确认加入优先抓取队列。请求不等于完成收录。`checklist.html` 的检查在读取索引数据时持续加载，没有可靠结论；其余未确认页面也不据此宣称已收录。
