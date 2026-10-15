@@ -108,3 +108,10 @@ Search Console最新网址检查确认首页、tv-playback.html、netflix-4k.htm
 - 首页改成单栏速读：保留账号形式、观看条件、费用算例、三个平台入口、购买前提问与官方来源；删去与专题重复的情境卡、长目录、风险卡、问答和侧栏。
 - 专题页删除重复表格、泛泛提醒和侧栏，保留实际排查步骤、计算器、链接来源及原有网址。九页均有实质内容改写，结构化数据的dateModified与站点地图lastmod同步为2026-10-15。
 - 继续观察Search Console的查询和页面表现。精简会改变页面文字，不能预设排名提升；若某个已收录页面的相关查询持续下降，再对照用户实际搜索问题补回必要答案。
+
+## 2026-10-15 SEO／AEO 答案顺序调整
+
+- 账号、电视播放、4K、购买清单和商品说明页在标题后直接回答各自的问题。费用页把26天月卡的30天折算结果和公式放到计算器前面，保留原来的算例、工具与锚点。
+- [Google 对 AI 搜索功能的说明](https://developers.google.com/search/docs/appearance/ai-features)指出，AI Overviews／AI Mode 没有额外的技术优化门槛；页面仍需满足普通搜索的收录和摘要资格。因此没有加入所谓专用 AEO 标签，也没有声称能保证 AI 引用。
+- 按[Google 的内容指南](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)优先提供明确答案和可核对的官方来源，不为了关键词重复加长正文。[FAQ 富媒体展示范围](https://developers.google.com/search/blog/2023/08/howto-faq-changes)主要限于权威政府与健康站点，本站未添加 FAQPage 标记。
+- 本次是内容结构调整，不能从发布本身推断排名改善。继续在 Search Console 观察页面索引、查询曝光与点击；站点地图原有“无法抓取”状态仍需依据后续报告核对。
