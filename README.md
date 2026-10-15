@@ -26,7 +26,7 @@ python scripts/check_site.py
 git diff --check
 ```
 
-检查桌面、手机布局；表格可在自身容器横向滚动。样式更新时统一更换CSS版本，正文实际修改时更新对应lastmod和内容核对日期。
+检查桌面、手机布局；表格可在自身容器横向滚动。样式更新时统一更换CSS版本；正文实际修改时更新对应的结构化数据日期与站点地图lastmod，不为显得“新”而每天改日期。
 
 ## 平台信息
 
@@ -42,7 +42,7 @@ git diff --check
 
 九页均有唯一标题摘要、自引用canonical、Open Graph、WebPage/WebSite标记；子页含可见面包屑和对应JSON-LD。站点地图列出九个规范URL，专题可从首页、导航和目录到达。
 
-还需使用真实Google账号完成Search Console验证和站点地图提交，见[SEO上线与维护](docs/SEO_OPERATIONS.md)。没有账号验证或数据时，不宣称已收录、已提交或排名已提升。
+Search Console的网址前缀资源已验证；九页站点地图已提交，但Google仍报告无法抓取，详见[SEO上线与维护](docs/SEO_OPERATIONS.md)。首页及三个专题页已确认收录，其余页面需继续核查。收录不代表排名提升。
 
 ## 本地实用工具
 
