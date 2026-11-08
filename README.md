@@ -1,8 +1,8 @@
 # 合租订阅指南
 
-[阅读网站：Netflix会员／奈飞会员购买与使用指南](https://hezu-guide-netflix.github.io/subscription-guide/)
+[阅读网站：Netflix奈飞、Spotify、Disney+、YouTube合租拼车指南](https://hezu-guide-netflix.github.io/subscription-guide/)
 
-无需构建工具的静态资料站，解释账号区别、观看条件、订阅费用和核对方法。规则引用官方资料，成本例子为教学假设，不代售商品或受理商家订单与售后。
+无需构建工具的静态资料站，覆盖Netflix奈飞、Spotify、Disney+、YouTube会员的合租拼车、账号交付、家庭资格、地区条件及故障处理。规则引用官方资料，成本例子为教学假设，不代售商品或受理商家订单与售后。
 
 ## 按问题阅读
 
