@@ -108,13 +108,16 @@ def main():
         assert date and re.fullmatch(r"\d{4}-\d{2}-\d{2}", date), "Invalid sitemap date"
         assert modified[url] == date, f"{url}: sitemap and page dates differ"
     homepage = (ROOT / "index.html").read_text(encoding="utf-8")
-    assert len(re.findall(r'guide-platform-actions"><a class="button"', homepage)) == 3
-    assert homepage.count('<code>mr23hey</code>') == 3
+    assert len(re.findall(r'guide-platform-actions"><a class="button"', homepage)) == 2
+    assert homepage.count('<code>mr23hey</code>') == 1
     labels = re.findall(r'guide-platform-actions"><a class="button"[^>]*>(.*?)</a>', homepage)
-    assert labels == ["奈飞小铺", "环球巴士", "银河录像局"], "Incorrect platform button labels"
+    assert labels == ["环球巴士", "银河录像局"], "Incorrect platform button labels"
     assert homepage.count("限新注册且未下过订单的用户。") == 2, "Missing coupon eligibility"
-    for url in ("ihezu.zone", "cn.goingbus.com", "nf.video"):
-        link = re.search(r'<a[^>]+href="https://' + re.escape(url) + r'[^>]+>', homepage)
+    assert 'href="https://ihezu' not in homepage and 'href="http://ihezu' not in homepage
+    assert 'aria-disabled="true">奈飞小铺（平台有风险）</span>' in homepage
+    assert '<code>8fDZl</code>' in homepage and 'https://nf.video/5cy27' not in homepage
+    for url in ("cn.goingbus.com?s=326BOCN3JD", "nf.video/8fDZl"):
+        link = re.search(r'<a[^>]+href="https?://' + re.escape(url) + r'[^>]+>', homepage)
         assert link and 'sponsored noopener noreferrer' in link.group(0)
     print(f"PASS: {len(pages)} pages; unique metadata, canonical URLs, JSON-LD, sitemap, HTML nesting, links, anchors, and platform controls")
 
