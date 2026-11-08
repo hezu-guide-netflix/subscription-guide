@@ -1,6 +1,6 @@
 # 合租订阅指南
 
-[阅读网站：Netflix订阅与账号使用指南](https://hezu-guide-netflix.github.io/subscription-guide/)
+[阅读网站：Netflix会员／奈飞会员购买与使用指南](https://hezu-guide-netflix.github.io/subscription-guide/)
 
 无需构建工具的静态资料站，解释账号区别、观看条件、订阅费用和核对方法。规则引用官方资料，成本例子为教学假设，不代售商品或受理商家订单与售后。
 
@@ -15,7 +15,7 @@
 
 ## 页面与维护
 
-首页是单栏速读版；guides.html保留专题目录；ihezu.html是商品说明核对示例；about.html说明来源与责任范围。详细步骤分别放在对应专题，避免首页重复铺陈。正文直接包含在HTML中，没有构建和前端依赖。
+首页是单栏会员入门指南，含官方开通步骤、套餐功能对照及常见问题；guides.html保留专题目录；ihezu.html是商品说明核对示例；about.html说明来源与责任范围。详细步骤分别放在对应专题，避免首页重复铺陈。正文直接包含在HTML中，没有构建和前端依赖。
 
 本地预览：`python -m http.server 8000`。GitHub Pages使用main分支根目录发布。
 
@@ -30,11 +30,11 @@ git diff --check
 
 ## 平台信息
 
-首页保留三个平台按钮，只显示平台名称。mr23hey为记录信息，当前优惠与条件以结算页为准，本站未测试结算效果。
+首页记录当前入口及条件，优惠以结算页为准，本站未测试结算效果。
 
-- 奈飞小铺：`https://ihezu.zone/cM5eHW`，标称9折。
-- 环球巴士：`https://cn.goingbus.com/?s=326BOCN3JD`，限新注册且未下过订单的用户，折扣以结算页为准。
-- 银河录像局：`https://nf.video/5cy27`，标称95折，限新注册且未下过订单的用户。
+- 奈飞小铺：入口已移除跳转，灰显并标记“平台有风险”，不再展示优惠。
+- 环球巴士：`http://cn.goingbus.com?s=326BOCN3JD`，代码`mr23hey`，限新注册且未下过订单的用户。
+- 银河录像局：`https://nf.video/8fDZl`，邀请码`8fDZl`，限新注册且未下过订单的用户，优惠以结算页为准。
 
 外链只列在首页，HTML保留适当的链接属性。资料页不写催促购买、推荐排名、安全背书或未经验证的体验。
 
